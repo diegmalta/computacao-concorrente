@@ -15,7 +15,7 @@ verificaremos se os valores finais de cada vetor estão corretos --- CHECK
 #include <stdlib.h> 
 #include <pthread.h>
 
-#define NTHREADS  10         //número total de threads para serem criadas
+#define NTHREADS  2 //número total de threads para serem criadas
 #define TAMANHO 10000       //número de posições do vetor a ser criado
 
 //cria a estrutura de dados para armazenar os argumentos da thread
