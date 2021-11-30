@@ -3,10 +3,10 @@
 #include<pthread.h>
 #include"timer.h"
 
-int *matriz; //matriz de entrada
-int *vetor; //vetor de entrada
-int *saidaSequencial; //vetor de saida da multiplicacao na parte Sequencial
-int *saidaConc; //vetor de saida da multiplicacao na parte concorrente
+int *matriz1; //matriz de entrada 1
+int *matriz2; //matriz de entrada 2
+int *saidaSequencial; //matriz de saida da multiplicacao na parte Sequencial
+int *saidaConc; //matriz de saida da multiplicacao na parte concorrente
 int nthreads; //numero de threads
 
 typedef struct{
@@ -20,12 +20,17 @@ void * tarefa(void *arg){
     //printf("Thread %d\n", args->id);
     for(int i=args->id;i<args->dim;i+=nthreads){
         for(int j=0;j<args->dim;j++){
-            saidaConc[i] += matriz[i*(args->dim)+j]*vetor[j];
+            int aux = 0;
+            for(int k=0; k<(args->dim); k++){
+                aux = aux + matriz1[i*(args->dim)+k]*matriz2[k*(args->dim)+j];
+            }
+            saidaConc[i*(args->dim)+j] = aux;
         }
     }
     pthread_exit(NULL);
 }   
 
+    
 //fluxo principal
 int main(int argc, char* argv[]){
     int dim; //variavel da dimensao das matrizes de entrada
@@ -45,22 +50,22 @@ int main(int argc, char* argv[]){
     }
     
     //alocacao de memoria para as estruturas de dados
-    matriz = malloc(sizeof(int)*dim*dim);
-    if(matriz == NULL){
-        printf("ERRO --- malloc(matriz)\n");
-        return 2;
-    }
-    vetor = malloc(sizeof(int)*dim);
-    if(vetor == NULL){
-        printf("ERRO --- malloc(vetor)\n");
+    matriz1 = malloc(sizeof(int)*dim*dim);
+    if(matriz1 == NULL){
+        printf("ERRO --- malloc(matriz1)\n");
         return 2;
     };
-    saidaSequencial = malloc(sizeof(int)*dim);
+    matriz2 = malloc(sizeof(int)*dim*dim);
+    if(matriz2 == NULL){
+        printf("ERRO --- malloc(matriz2)\n");
+        return 2;
+    };
+    saidaSequencial = malloc(sizeof(int)*dim*dim);
     if(saidaSequencial == NULL){
         printf("ERRO --- malloc(saida Sequencial)\n");
         return 2;
-    };    
-    saidaConc = malloc(sizeof(int)*dim);
+    };
+    saidaConc = malloc(sizeof(int)*dim*dim);
     if(saidaConc == NULL){
         printf("ERRO --- malloc(saida concorrente)\n");
         return 2;
@@ -70,18 +75,22 @@ int main(int argc, char* argv[]){
     //inicializacao das estruturas de dados
     for(int i=0;i<dim;i++){
         for(int j=0;j<dim;j++){
-            matriz[i*dim+j] = (rand() % 100); //equivalente a matriz[i][j] e rand() % 100 gera um numero aleatorio inteiro de 0 a 99
+            matriz1[i*dim+j] = (rand() % 100); //equivalente a matriz[i][j] e rand() % 100 gera um numero aleatorio inteiro de 0 a 99
+            matriz2[i*dim+j] = (rand() % 100);
+            saidaSequencial[i*dim+j] = 0;
+            saidaConc[i*dim+j] = 0;
         }
-        vetor[i] = (rand() % 100);
-        saidaSequencial[i] = 0;
-        saidaConc[i] = 0;
     }
 
     //multiplicacao na funcao main, como forma Sequencial de multiplicacao
     GET_TIME(inicioSequencial);
     for(int i=0;i<dim;i++){
         for(int j=0;j<dim;j++){
-            saidaSequencial[i] += matriz[i*dim+j]*vetor[j];
+            int aux = 0;
+            for(int k=0; k<dim; k++){
+                aux = aux + matriz1[i*dim+k]*matriz2[k*dim+j];
+            }
+            saidaSequencial[i*dim+j] = aux;
         }
     }
     GET_TIME(fimSequencial);
@@ -160,12 +169,12 @@ int main(int argc, char* argv[]){
     }
     printf("Matrizes calculadas com sucesso!\n");
 
-    printf("Tempo Sequencial / Tempo Concorrente = %lf\n", tempoDecorridoSequencial/tempoDecorridoConcorrente);
+    //printf("Tempo Sequencial / Tempo Concorrente = %lf\n", tempoDecorridoSequencial/tempoDecorridoConcorrente);
 
 
     //liberacao da memoria
-    free(matriz);
-    free(vetor);
+    free(matriz1);
+    free(matriz2);
     free(saidaSequencial);
     free(saidaConc);
     free(args);
