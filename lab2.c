@@ -129,33 +129,6 @@ int main(int argc, char* argv[]){
     tempoDecorridoConcorrente = fimConcorrente - inicioConcorrente;
     printf("tempo de execucao das threads: %lf\n", tempoDecorridoConcorrente);
 
-    
-    //exibicao dos resultados
-    /*
-    puts("Matriz de entrada: ");
-    for(int i=0;i<dim;i++){
-        for(int j=0;j<dim;j++){
-            printf("%d ", matriz[i*dim+j]);
-        }
-        puts("");
-    }
-    puts("Vetor de entrada: ");
-    for(int i=0;i<dim;i++){
-            printf("%d ", vetor[i]);
-    }
-    puts("");
-    puts("Vetor de saída: ");
-    for(int i=0;i<dim;i++){
-            printf("%d ", saidaSequencial[i]);
-    }
-    puts("");
-    puts("Vetor de saída concorrente: ");
-        for(int i=0;i<dim;i++){
-            printf("%d ", saidaConc[i]);
-    }
-    puts("");
-    */
-
     //conferimento dos resultados das multiplicacoes concorrentes e Sequencial
 
     //saidaSequencial[10] = 7; //TESTE PARA VERIFICAR SE VALORES ERRADOS SÃO CAPTADOS PELA FUNÇÃO ABAIXO
