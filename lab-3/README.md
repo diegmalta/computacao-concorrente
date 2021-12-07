@@ -6,20 +6,20 @@
 _Ts_ = Tempo Sequencial
 _Tc_ = Tempo Concorrente
 
->Com Dimensão 10⁵ (10.000) com 1 _Thread_
-_Ts_ = 0.000311
-_Tc_ = 0.000543
-Aceleração = 0,57
+###Com Dimensão 10⁵ (10.000) com 1 _Thread_
+>_Ts_ = 0.000311
+>_Tc_ = 0.000543
+>Aceleração = 0,57
 
->Com Dimensão 10⁵ (10.000) com 2 _Threads_
-_Ts_ = 0.000401
-_Tc_ = 0.000410
-Aceleração = 0,98
+###Com Dimensão 10⁵ (10.000) com 2 _Threads_
+>_Ts_ = 0.000401
+>_Tc_ = 0.000410
+>Aceleração = 0,98
 
->Com Dimensão 10⁵ (10.000) com 4 _Threads_
-_Ts_ = 0.000330
-_Tc_ = 0.000353
-Aceleração = 0,93
+###Com Dimensão 10⁵ (10.000) com 4 _Threads_
+>_Ts_ = 0.000330
+>_Tc_ = 0.000353
+>Aceleração = 0,93
 
 
 >Com Dimensão 10⁷ (10.000) com 1 _Thread_
