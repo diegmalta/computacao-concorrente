@@ -4,6 +4,7 @@
 
 #### Legenda: 
 _Ts_ = Tempo Sequencial
+
 _Tc_ = Tempo Concorrente
 
 ### Com Dimensão 10⁵ (10.000) com 1 _Thread_
