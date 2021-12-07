@@ -60,12 +60,16 @@ _Tc_ = Tempo Concorrente
 
 ### Com Dimensão 10⁸ (10.000) com 2 _Threads_
 >_Ts_ = 0.311856
+>
 >_Tc_ = 0.167006
+>
 >Aceleração = 1,87
 
 ### Com Dimensão 10⁸ (10.000) com 4 _Threads_
 >_Ts_ = 0.333619
+>
 >_Tc_ = 0.099895
+>
 >Aceleração = 3,34
 
 
