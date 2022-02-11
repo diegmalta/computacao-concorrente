@@ -1,0 +1,172 @@
+---------------------------------------------------------------------
+THREADS PRODUTORAS: 1
+THREADS CONSUMIDORAS: 1
+TAMANHO DO BUFFER: 7
+
+Sou a thread produtora 1
+Sou a thread consumidora 2
+PREENCHENDO O BUFFER INTEIRO
+INSERINDO ITEM - Thread id: 1
+1 0 0 0 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 0 0 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 0 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 1 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 1 1 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 1 1 1 
+
+RETIRANDO ITEM - Thread id: 2
+0 1 1 1 1 1 1 
+
+RETIRANDO ITEM - Thread id: 2
+0 0 1 1 1 1 1 
+
+RETIRANDO ITEM - Thread id: 2
+0 0 0 1 1 1 1 
+
+RETIRANDO ITEM - Thread id: 2
+0 0 0 0 1 1 1 
+
+RETIRANDO ITEM - Thread id: 2
+0 0 0 0 0 1 1 
+
+RETIRANDO ITEM - Thread id: 2
+0 0 0 0 0 0 1 
+
+RETIRANDO ITEM - Thread id: 2
+0 0 0 0 0 0 0 
+
+PREENCHENDO O BUFFER INTEIRO
+INSERINDO ITEM - Thread id: 1
+1 0 0 0 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 0 0 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 0 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 1 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 1 1 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 1 1 1 
+
+RETIRANDO ITEM - Thread id: 2
+0 1 1 1 1 1 1 
+
+FIM DO PROGRAMA.
+
+
+
+
+
+
+---------------------------------------------------------------------
+THREADS PRODUTORAS: 1
+THREADS CONSUMIDORAS: 3
+TAMANHO DO BUFFER: 7
+
+Sou a thread produtora 1
+Sou a thread consumidora 2
+Sou a thread consumidora 3
+Sou a thread consumidora 4
+PREENCHENDO O BUFFER INTEIRO
+INSERINDO ITEM - Thread id: 1
+1 0 0 0 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 0 0 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 0 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 1 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 1 1 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 1 1 1 
+
+RETIRANDO ITEM - Thread id: 2
+0 1 1 1 1 1 1 
+
+RETIRANDO ITEM - Thread id: 3
+0 0 1 1 1 1 1 
+
+RETIRANDO ITEM - Thread id: 4
+0 0 0 1 1 1 1 
+
+RETIRANDO ITEM - Thread id: 3
+0 0 0 0 1 1 1 
+
+RETIRANDO ITEM - Thread id: 2
+0 0 0 0 0 1 1 
+
+RETIRANDO ITEM - Thread id: 4
+0 0 0 0 0 0 1 
+
+RETIRANDO ITEM - Thread id: 2
+0 0 0 0 0 0 0 
+
+PREENCHENDO O BUFFER INTEIRO
+INSERINDO ITEM - Thread id: 1
+1 0 0 0 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 0 0 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 0 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 0 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 1 0 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 1 1 0 
+
+INSERINDO ITEM - Thread id: 1
+1 1 1 1 1 1 1 
+
+RETIRANDO ITEM - Thread id: 3
+0 1 1 1 1 1 1 
+
+RETIRANDO ITEM - Thread id: 4
+0 0 1 1 1 1 1 
+
+RETIRANDO ITEM - Thread id: 2
+0 0 0 1 1 1 1 
+
+FIM DO PROGRAMA.
+
+
+
+
+
+
